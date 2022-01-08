@@ -11,7 +11,6 @@ public class Cards {
             "Jack", "Queen", "King", "Ace"
         };
 
-        // initialize deck
         int n = SUITS.length * RANKS.length;
         String[] deck = new String[n];
         for (int i = 0; i < RANKS.length; i++) {
@@ -19,8 +18,7 @@ public class Cards {
                 deck[SUITS.length*i + j] = RANKS[i] + " of " + SUITS[j];
             }
         }
-        
-     // shuffle
+       
         for (int i = 0; i < n; i++) {
             int r = i + (int) (Math.random() * (n-i));
             String temp = deck[r];
@@ -28,7 +26,6 @@ public class Cards {
             deck[i] = temp;
         }
 
-        // print shuffled deck
         for (int i = 0; i < n; i++) {
             System.out.println(deck[i]);
         }
